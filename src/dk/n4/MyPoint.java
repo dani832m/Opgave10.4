@@ -1,37 +1,37 @@
 package dk.n4;
 
-public class MyPoint {
+public class MyPoint { //Public klasse ved navn "MyPoint"
 
-	    private double x, y;
+	private double x, y; //Deklarerer variablerne "x" og "y"
 
-	    // Getters
-	    public double getXCoordinate() { // Returnerer x-koordinaten
-	        return x;
-        }
+	//Getters
+	public double getXCoordinate() { //Metode der returnerer en double
+		return x; //Returnerer "x"
+	}
 
-        public double getYCoordinate() { // Returnerer y-koordinaten
-            return y;
-        }
+        public double getYCoordinate() { //Metode der returnerer en double
+		return y; //Returnerer "y"
+	}
 
-        // Setters
-        public void setXCoordinate(double x) { // Angiv x-koordinaten
-	        this.x = x;
-        }
+        //Setters
+	public void setXCoordinate(double x) { //Angiv x-koordinaten, returnerer ikke noget
+		this.x = x; //Parametret "x" er lig instansvariablen "x"
+	}
 
-        public void setYCoordinate(double y) { // Angiv y-koordinaten
-            this.y = y;
-        }
+	public void setYCoordinate(double y) { //Angiv y-koordinaten, returnerer ikke noget
+		this.y = y; //Parametret "y" er lig instansvariablen "y"
+	}
 
-        // Methods (De fleste af metoderne herunder måtte jeg finde hjælp til på nettet)
-        public double distance(double x, double y) { // Metode tager argumenter ind
-            return Math.sqrt((this.x - x) * (this.x - x) + (this.y - y) * (this.y - y)); // Returnerer x * x + y * y
-        }
+	//Methods (De fleste af metoderne herunder måtte jeg finde hjælp til på nettet)
+	public double distance(double x, double y) { //Metode tager to argumenter ind. Returnerer double
+		return Math.sqrt((this.x - x) * (this.x - x) + (this.y - y) * (this.y - y)); //Returnerer x * x + y * y
+	}
 
-        public double distance(MyPoint point) { // Metode tager argument ind fra MyPoint med navnet point
-            return distance(point.x, point.y);
-        }
+	public double distance(MyPoint point) { //Metode tager argument ind fra "MyPoint" med navnet "point"
+		return distance(point.x, point.y); //Returnerer "distance"
+	}
 
-        public MyPoint getCenterPoint(MyPoint p) {
+        public MyPoint getCenterPoint(MyPoint p) { //Metode der tager argument ind fra "MyPoint" med navnet "p"
             return new MyPoint((p.x + this.x) / 2, (p.y + this.y) / 2);
         }
 
@@ -86,11 +86,11 @@ public class MyPoint {
         }
 
         // Constructors
-        MyPoint() { // Default constructor der sætter koordinatsættet til (0.0, 0.0)
+        MyPoint() { //Default constructor der sætter koordinatsættet til (0.0, 0.0)
             this(0,0);
         }
 
-        MyPoint(double x, double y) { // Constructor der tager to argumenter ind, en x- og en y-koordinat
+        MyPoint(double x, double y) { //Constructor der tager to argumenter ind, en x- og en y-koordinat
 	        this.x = x;
 	        this.y = y;
         }
